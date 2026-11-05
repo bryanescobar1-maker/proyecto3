@@ -7,6 +7,6 @@ def home():
     return jsonify({
         "message": "Licentra API funcionando"
     })
-
+m
 if __name__ == "__main__":
     app.run()
