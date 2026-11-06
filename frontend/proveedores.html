@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Licentra - Proveedores SaaS</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+</link></head>
+<body>
+<div class="dashboard-container">
+<!-- SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-top">
+<div class="brand">
+<div class="logo-box">L</div>
+<span class="brand-name">licentra</span>
+</div>
+<div class="workspace-dropdown">
+<div class="workspace-info">
+<span>SAAS / iOS</span>
+<strong>Centro de Control</strong>
+</div>
+<span class="material-symbols-outlined">unfold_more</span>
+</div>
+<div class="sidebar-menu">
+<span class="menu-label">ESPACIO DE TRABAJO</span>
+<a class="menu-item" href="panel.html">
+<span class="material-symbols-outlined">dashboard</span> Panel de control
+                    </a>
+<a class="menu-item active" href="proveedores.html">
+<span class="material-symbols-outlined">cloud</span> Proveedores SaaS
+                    </a>
+<a class="menu-item" href="dashboard.html">
+<span class="material-symbols-outlined">group</span> Asignacion de licencias
+                    </a>
+</div>
+</div>
+<div class="sidebar-bottom">
+<a class="menu-item" href="configuracion.html">
+<span class="material-symbols-outlined">settings</span> Configuración
+                </a>
+<a class="menu-item" href="ayuda.html">
+<span class="material-symbols-outlined">help</span> Centro de ayuda
+                </a>
+<a class="menu-item" href="index.html" style="margin-top: 1rem; color: #ef4444;">
+<span class="material-symbols-outlined">logout</span> Cerrar sesión
+                </a>
+</div>
+</aside>
+<!-- MAIN CONTENT -->
+<main class="main-content">
+<header class="top-bar">
+<span>Espacio de trabajo / <strong>Proveedores SaaS</strong></span>
+<span>USD · Dólar estadounidense ▾</span>
+</header>
+<div class="content-body">
+<div class="page-header">
+<div>
+<span style="font-size: 0.75rem; font-weight: 700; color: #6366f1; letter-spacing: 1px;">CATÁLOGO DE SOFTWARE</span>
+<h1>Proveedores SaaS</h1>
+<p>Administra tus suscripciones, sus costos y las fechas que no pueden esperar.</p>
+</div>
+<button class="btn-primary" id="registerProviderButton">
+<span class="material-symbols-outlined">add</span> Registrar Software
+                    </button>
+</div>
+<!-- Métricas Superiores -->
+<div class="metrics-row" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; background: transparent; padding: 0; border: none; margin-bottom: 1.5rem;">
+<div style="background: white; padding: 1.25rem; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1rem;">
+<div style="background: #eef2ff; color: #4f46e5; padding: 10px; border-radius: 8px;"><span class="material-symbols-outlined">dns</span></div>
+<div>
+<span style="font-size: 0.75rem; color: #64748b; display: block;">Software registrado</span>
+<strong style="font-size: 1.25rem; color: #0f172a;">06 <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">proveedores</span></strong>
+</div>
+</div>
+<div style="background: white; padding: 1.25rem; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1rem;">
+<div style="background: #eef2ff; color: #4f46e5; padding: 10px; border-radius: 8px;"><span class="material-symbols-outlined">payments</span></div>
+<div>
+<span style="font-size: 0.75rem; color: #64748b; display: block;">Inversión mensual</span>
+<strong style="font-size: 1.25rem; color: #0f172a;">$1,250 <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">USD / mes</span></strong>
+</div>
+</div>
+<div style="background: white; padding: 1.25rem; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1rem;">
+<div style="background: #eef2ff; color: #4f46e5; padding: 10px; border-radius: 8px;"><span class="material-symbols-outlined">event_upcoming</span></div>
+<div>
+<span style="font-size: 0.75rem; color: #64748b; display: block;">Renovaciones cercanas</span>
+<strong style="font-size: 1.25rem; color: #0f172a;">03 <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">próximos 10 días</span></strong>
+</div>
+</div>
+</div>
+<!-- Tabla de Proveedores -->
+<div class="table-card">
+<div class="table-filters">
+<div class="search-box">
+<span class="material-symbols-outlined">search</span>
+<input placeholder="Buscar software o proveedor..." type="text"/>
+</div>
+<button class="filter-btn">Todas las categorías ▾</button>
+<button class="filter-btn"><span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle;">download</span> Exportar</button>
+</div>
+<table class="employees-table">
+<thead>
+<tr>
+<th>SOFTWARE</th>
+<th>TIPO DE PLAN</th>
+<th>COSTO MENSUAL</th>
+<th>PRÓXIMO PAGO</th>
+<th>ASIGNADAS</th>
+<th>ESTADO</th>
+<th style="text-align: right;">ACCIONES</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/proveedores.js"></script>
+</body>
+</html>

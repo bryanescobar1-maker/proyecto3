@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Licentra - Asignación de Licencias</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="css/gestion.css" rel="stylesheet"/></head>
+<body>
+<div class="dashboard-container">
+<aside class="sidebar">
+<div class="sidebar-top">
+<div class="brand">
+<div class="logo-box">L</div>
+<span class="brand-name">licentra</span>
+</div>
+<div class="workspace-dropdown">
+<div class="workspace-info">
+<span>SAAS / iOS</span>
+<strong>Centro de Control</strong>
+</div>
+<span class="material-symbols-outlined">unfold_more</span>
+</div>
+<div class="sidebar-menu">
+<span class="menu-label">ESPACIO DE TRABAJO</span>
+<a class="menu-item" href="panel.html"><span class="material-symbols-outlined">dashboard</span> Panel de control</a>
+<a class="menu-item" href="proveedores.html"><span class="material-symbols-outlined">cloud</span> Proveedores SaaS</a>
+<a class="menu-item active" href="dashboard.html"><span class="material-symbols-outlined">group</span> Asignacion de licencias</a>
+</div>
+</div>
+<div class="sidebar-bottom">
+<a class="menu-item" href="configuracion.html"><span class="material-symbols-outlined">settings</span> Configuración</a>
+<a class="menu-item" href="ayuda.html"><span class="material-symbols-outlined">help</span> Centro de ayuda</a>
+<a class="menu-item" href="index.html" style="margin-top: 1rem; color: #ef4444;"><span class="material-symbols-outlined">logout</span> Cerrar sesión</a>
+</div>
+</aside>
+<main class="main-content">
+<header class="top-bar">
+<span>Espacio de trabajo / <strong>Licencias y empleados</strong></span>
+<span>USD · Dólar estadounidense ▾</span>
+</header>
+<div class="content-body">
+<div class="page-header"><div><span style="font-size:.75rem;font-weight:700;color:#6366f1;letter-spacing:1px">PERSONAS Y ACCESOS</span><h1>Asignación de licencias</h1><p>Gestiona empleados y sus accesos reales.</p></div></div>
+<div id="gestionStatus" role="status"></div>
+<div class="real-cards"><article><small>Empleados</small><strong id="gEmployees">0</strong></article><article><small>Asignadas</small><strong id="gAssigned">0</strong></article><article><small>Disponibles</small><strong id="gAvailable">0</strong></article></div>
+<div class="real-actions"><button class="btn-primary" id="newEmployee">+ Registrar empleado</button><button class="btn-primary" id="newAssignment">+ Asignar licencia</button><button class="filter-btn" id="exportEmployees">Exportar empleados CSV</button></div>
+<section class="real-section"><h2>Empleados</h2><input class="real-input" id="searchEmployee" placeholder="Buscar por nombre o correo..."/><div class="real-scroll"><table class="real-table"><thead><tr><th>Nombre</th><th>Correo</th><th>Departamento</th><th>Licencias</th><th>Acciones</th></tr></thead><tbody id="employeesBody"></tbody></table></div></section>
+<section class="real-section"><h2>Licencias asignadas</h2><div class="real-scroll"><table class="real-table"><thead><tr><th>Empleado</th><th>Software</th><th>Fecha</th><th>Acción</th></tr></thead><tbody id="assignmentsBody"></tbody></table></div></section>
+<dialog class="real-dialog" id="gestionDialog"><form id="gestionForm"><h2 id="dialogTitle">Registro</h2><div id="dialogFields"></div><div class="real-actions"><button class="filter-btn" id="cancelDialog" type="button">Cancelar</button><button class="btn-primary" type="submit">Guardar</button></div></form></dialog>
+</div>
+</main>
+</div>
+<script src="js/api.js"></script>
+<script src="js/gestion.js"></script></body>
+</html>
